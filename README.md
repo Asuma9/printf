@@ -1,18 +1,18 @@
-C - printf
+# C - printf
 
-This repository holds a collaboration to create custom printf function.
+This repository holds a collaboration to create a custom `printf` function.
 
-Authorized functions and macros include:
+## Authorized Functions and Macros
 
-write
-malloc
-free
-va_start
-va_end
-va_copy
-va_arg
+- `write`
+- `malloc`
+- `free`
+- `va_start`
+- `va_end`
+- `va_copy`
+- `va_arg`
 
-The main objectives:
+## Main Objectives
 
-To understand how printf function works.
-To understand the use of variadic functions.
+1. Understand how the `printf` function works.
+2. Understand the use of variadic functions.
