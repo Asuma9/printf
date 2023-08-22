@@ -25,7 +25,7 @@ int _printf(const char *format, ...)
 		{
 			spec = format[i + 1]; /* passing conversion specifier*/
 			counter = counter + (*selector(spec))(args); /* calling selector func*/
-			
+
 			i++;
 		}
 		else

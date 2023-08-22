@@ -1,8 +1,7 @@
 #include "main.h"
 /**
  * *selector - fxn ptr, decides the right format call
- * @chr: passed char after specifier
- * @va_list: macro
+ * @ch: passed char after specifier
  * Return: correct function
  */
 
