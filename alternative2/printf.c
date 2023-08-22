@@ -22,7 +22,7 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
-			spec = format[i + 1];
+			spec = format[i + 1]; /* move past spec */
 			func = selector(spec);
 
 			if (func != NULL)
