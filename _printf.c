@@ -19,6 +19,12 @@ int _printf(const char *format, ...)
 		if (*format == '%')
 		{
 			format++;
+
+			/* check if it is end of string after %, just like printf */
+			if (*format == '\0')
+			{
+				break;
+			}
 			if (*format == 's')
 				counter += _print_string(va_arg(args, char *));
 			else if (*format == 'c')
@@ -27,14 +33,7 @@ int _printf(const char *format, ...)
 				counter += _print_percent();
 			else
 			{
-				if (*(format + 1) != '\0')
-				{
-					counter += write(1, format - 1, 2);
-				}
-				else
-				{
-					counter += write(1, format - 1, 1);
-				}
+				counter += write(1, format - 1, 1);
 			}
 		}
 		else
