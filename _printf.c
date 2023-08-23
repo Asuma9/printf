@@ -30,6 +30,10 @@ int _printf(const char *format, ...)
 				case 'c':
 					counter += _print_char(va_arg(args, int));
 					break;
+				case 'd':
+				case 'i':
+					counter += _print_int(va_arg(args, int));
+					break;
 				case '%':
 					counter += _print_percent();
 					break;
