@@ -34,6 +34,8 @@ int _printf(const char *format, ...)
 					counter += _print_percent();
 					break;
 				case 'd':
+					counter += _print_decimal(va_arg(args, int));
+					break;
 				case 'i':
 					counter += _print_decimal(va_arg(args, int));
 					break;
