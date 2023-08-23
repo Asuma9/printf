@@ -26,10 +26,21 @@ int _printf(const char *format, ...)
 			else if (*format == '%')
 				counter += _print_percent();
 			else
-				counter += write(1, format - 1, 2);
+			{
+				if (*(format + 1) != '\0')
+				{
+					counter += write(1, format - 1, 2);
+				}
+				else
+				{
+					counter += write(1, format - 1, 1);
+				}
+			}
 		}
 		else
+		{
 			counter += write(1, format, 1);
+		}
 		format++;
 	}
 
