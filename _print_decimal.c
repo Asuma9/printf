@@ -19,13 +19,15 @@ int _print_decimal(int n)
 	if (n >= 0 && n < 10)
 	{
 		_putchar(n + '0');
+
+		digit = n + '0';
 		count++;
 	}
 	else
 	{
 		count += _print_decimal(n / 10);
-			_putchar(n % 10 + '0');
-			count++;
+		_putchar(n % 10 + '0');
+		count++;
 	}
 	return (count);
 }

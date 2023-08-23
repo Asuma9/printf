@@ -33,6 +33,10 @@ int _printf(const char *format, ...)
 				case '%':
 					counter += _print_percent();
 					break;
+				case 'd':
+				case 'i':
+					counter += _print_decimal(va_arg(args, int));
+					break;
 				default:
 					counter += write(1, format - 1, 2);
 					break;

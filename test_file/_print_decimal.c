@@ -24,8 +24,8 @@ int _print_decimal(int n)
 	else
 	{
 		count += _print_decimal(n / 10);
-			_putchar(n % 10 + '0');
-			count++;
+		_putchar(n % 10 + '0');
+		count++;
 	}
 	return (count);
 }
