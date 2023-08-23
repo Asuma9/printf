@@ -6,10 +6,26 @@
  *
  * Return: void
  */
-void _print_decimal(int a)
+int _print_decimal(int n)
 {
-	char digit = a + '0';
+	int count = 0;
 
-	write(1, &digit, 1);
-
+	if (n < 0)
+	{
+		_putchar('-');
+		count++;
+		n = -n;
+	}
+	if (n >= 0 && n < 10)
+	{
+		_putchar(n + '0');
+		count++;
+	}
+	else
+	{
+		count += _print_decimal(n / 10);
+			_putchar(n % 10 + '0');
+			count++;
+	}
+	return (count);
 }
