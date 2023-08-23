@@ -10,7 +10,7 @@ int _print_string(char *str)
 	int count = 0;
 
 	if (!str)
-		str = "(null)";
+		return (write(1, "(null)", 6));
 
 	while (*str)
 	{
